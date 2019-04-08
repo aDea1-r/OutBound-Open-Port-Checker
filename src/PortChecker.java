@@ -24,7 +24,6 @@ public class PortChecker {
                 System.out.println("Port "+port+" is open; connected in " + (tf-ti)+ " ms");
                 openList = new PrintWriter(new BufferedWriter(new FileWriter("Open Port List.txt",true)));
                 openList.println(port);
-//                openList.println(Math.random());
                 openList.close();
             } catch (ConnectException | SocketTimeoutException e) {
                 System.out.println("Port " + port + " is not open");
